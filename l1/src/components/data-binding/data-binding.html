@@ -1,0 +1,60 @@
+<p>data-binding works!</p>
+
+<div class="row">
+    <div class="col-6">
+        1.interpolation
+
+        <p>Firstname=>{{firstName}}</p>
+        <div>
+            {{rollNumber }}
+        </div>
+</div>
+        <div class="col-6">
+            2.property binding
+
+            <input type="text" [value]="firstName" />
+            <br>
+            <input type="text" [placeholder]="myPlaceholder" />
+
+            <br>
+
+            <div [class]="divClassName" style="width: 100px;height: 100px;">
+
+            </div>
+        </div>
+
+        <div class="row">
+             3.event binding
+            <div class="col-3">
+               
+                <button class="btn btn-success" (click)="showWelcomeMessage()" >show welcome text</button>
+            </div>
+            <div class="col-3">
+                <select (change)="onCityChange()">
+                    <option value="pune">pune</option>
+                    <option value="tamilnadu">tamilnadu</option>
+                    <option value="kerala">kerala</option>
+                    <option value="karnataka">karnataka</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="row">
+            4.two way binding
+            <div class="col-3">
+                <input type="text" [(ngModel)]="firstName" />
+            </div>
+            <div class="col-3">
+                 <select [(ngModel)]="selectedCity">
+                    <option value="pune">pune</option>
+                    <option value="tamilnadu">tamilnadu</option>
+                    <option value="kerala">kerala</option>
+                    <option value="karnataka">karnataka</option>
+                </select>
+                - {{selectedCity}}
+            </div>
+        </div>
+        
+    
+</div>
