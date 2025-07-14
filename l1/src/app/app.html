@@ -19,4 +19,21 @@
 
 <!-- <app-ng-class></app-ng-class> -->
 
-<app-ng-style></app-ng-style>
+<!-- <app-ng-style></app-ng-style> -->
+
+<nav class="navbar navbar-inverse testnav">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="javascript:void(0);">WebSiteName</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav" style="visibility: visible;">
+        <li class="active"><a href="javascript:void(0);">Home</a></li>
+        <li><a routerLink="admin">Admin</a></li>
+        <li><a routerLink="databinding">databinding</a></li>
+        <li><a routerLink="ngclass">ngclass</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
