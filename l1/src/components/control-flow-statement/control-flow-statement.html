@@ -1,0 +1,96 @@
+<p>control-flow-statement works!</p>
+
+<div class="row">
+    <div class="col-3">
+
+        @if (div1Visible==true) {
+        <div class="bg-success p-3">
+            div 1
+        </div>
+      }   
+    </div>
+
+    <div class="col-3">
+        @if(isChecked==true) {
+        <div class="bg-primary p-3">
+            checkbox is checked
+        </div>
+    }
+    @else {
+         <div class="bg-danger p-3">
+            checkbox is unchecked
+        </div>
+    }
+    </div>
+    <div class="col-3">
+        @if (dayName=="mon") {
+        <span>monday</span>
+        }@else if (dayName=="tue") {
+        <span>tuesday</span>
+        }@else if (dayName=="wed") {
+        <span>wednesday</span>
+        }@else if (dayName=="thu") {
+        <span>thursday</span>
+        }@else if (dayName=="fri") {
+        <span>friday</span>
+        }@else if (dayName=="sat") {
+        <span>saturday</span>
+        }@else if (dayName=="sun") {
+        <span>sunday</span>
+        }@else {
+        <span>not a valid day</span>
+    }
+    </div>
+</div>
+
+<div class="row pt-4">
+    <div class="col-3">
+       <button class="btn btn-success" (click)="hideShowDiv1(true)">show</button>
+        <button class="btn btn-danger"(click)="hideShowDiv1(false)">hide</button>
+
+    </div>
+    <div class="col-3">
+       <input type="checkbox" [(ngModel)]="isChecked"/>
+    </div>
+    <div class="col-3">
+       <input type="text" [(ngModel)]="dayName" maxlength="3" placeholder="enter day starting"/>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        <select>
+            @for (item of cityList; track $index) {
+                <option >{{item}}</option>
+            }
+        </select>
+    </div>
+    <div class="col-3">
+        @for (city of cityList; track $index) {
+            <button class="btn btn-success">{{city}}</button>
+        }
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-5">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>position</th>
+            </tr>
+            </thead>
+            <tbody>
+                @for (item of employeeList; track $index) {
+                    <tr>
+                        <td>{{$index+1}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.position}}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { Admin } from '../components/admin/admin';
 import { DataBinding } from '../components/data-binding/data-binding';
 import { NgClass } from '../components/ng-class/ng-class';
+import { ControlFlowStatement } from '../components/control-flow-statement/control-flow-statement';
 
 export const routes: Routes = [
     //default route
@@ -22,5 +23,9 @@ export const routes: Routes = [
     {
         path:'ngclass',
         component:NgClass
+    },
+    {
+        path:"controlFlow",
+        component:ControlFlowStatement
     }
 ];
