@@ -9,6 +9,7 @@ import { NgFor } from '../components/ng-for/ng-for';
 import { NgIf } from '../components/ng-if/ng-if';
 import { NgStyle } from '../components/ng-style/ng-style';
 import { User } from '../components/user/user';
+import { TemplateForm } from '../components/template-form/template-form';
 
 export const routes: Routes = [
     //default route
@@ -57,5 +58,9 @@ export const routes: Routes = [
     {
         path:'linkedSignal',
         component:LinkedSignal
+    },
+    {
+        path:'templateForm',
+        component:TemplateForm
     }
 ];
