@@ -10,6 +10,7 @@ import { NgIf } from '../components/ng-if/ng-if';
 import { NgStyle } from '../components/ng-style/ng-style';
 import { User } from '../components/user/user';
 import { TemplateForm } from '../components/template-form/template-form';
+import { ReactiveForm } from '../components/reactive-form/reactive-form';
 
 export const routes: Routes = [
     //default route
@@ -62,5 +63,9 @@ export const routes: Routes = [
     {
         path:'templateForm',
         component:TemplateForm
+    },
+    {
+        path:'reactiveForm',
+        component:ReactiveForm
     }
 ];
