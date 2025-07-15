@@ -3,6 +3,7 @@ import { Admin } from '../components/admin/admin';
 import { DataBinding } from '../components/data-binding/data-binding';
 import { NgClass } from '../components/ng-class/ng-class';
 import { ControlFlowStatement } from '../components/control-flow-statement/control-flow-statement';
+import { Signal } from '../components/signal/signal';
 
 export const routes: Routes = [
     //default route
@@ -27,5 +28,9 @@ export const routes: Routes = [
     {
         path:"controlFlow",
         component:ControlFlowStatement
+    },
+    {
+        path: 'signal',
+        component:Signal
     }
 ];
