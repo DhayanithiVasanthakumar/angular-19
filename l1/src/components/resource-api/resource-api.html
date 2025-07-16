@@ -1,0 +1,26 @@
+<p>resource-api works!</p>
+
+<div class="row">
+    <div class="col-3">
+        <!-- hasValue => resourse la data iruka ilaya nu paakum,irunth a true,ilana false -->
+        {{userList.hasValue()}}
+    </div>
+    <div class="col-3">
+        <ul>
+            @for (item of userList.value(); track $index) {
+            <li>{{item.name}} - {{item.username}}</li>
+           
+            }
+        </ul>
+    </div>
+
+    <div class="col-3">
+        <!-- isLoading => by default ithu true ah irukum ,oru thadava load page load agiduchina false varum -->
+        {{userList.isLoading()}}
+    </div>
+    
+<div class="col">
+    <button class="btn btn-primary" (click)="reloadData()">reload data</button>
+</div>
+
+</div>
