@@ -12,6 +12,7 @@ import { User } from '../components/user/user';
 import { TemplateForm } from '../components/template-form/template-form';
 import { ReactiveForm } from '../components/reactive-form/reactive-form';
 import { GetApi } from '../components/API/get-api/get-api';
+import { PostApi } from '../components/API/post-api/post-api';
 
 export const routes: Routes = [
     //default route
@@ -72,5 +73,9 @@ export const routes: Routes = [
     {
         path:'get-api',
         component:GetApi
+    },
+    {
+        path:'post-api',
+        component:PostApi
     }
 ];

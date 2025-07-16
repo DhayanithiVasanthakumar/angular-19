@@ -1,0 +1,92 @@
+<p>post-api works!</p>
+
+
+<div class="row">
+    <div class="col-8 text-center">
+        <h2>POST API Integration using Template form</h2>
+    </div>
+    <div class="col-4">
+        <button class="btn btn-success" (click)="getAllCars()">load cars</button>
+    </div>
+</div>
+
+<div class="row pt-2">
+    <div class="col-7">
+        <div class="card">
+            <div class="card-header bg-warning">
+                <h5>car list</h5>
+            </div>
+            <div class="car-body">
+                <div class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>s no</th>
+                            <th>brand</th>
+                            <th>model</th>
+                            <th>req no</th>
+                            <th>daily rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (item of carList; track $index) {
+                            <tr>
+                                <td>{{$index+1}}</td>
+                                <td>{{item.brand}}</td>
+                                <td>{{item.model}}</td>
+                                <td>{{item.regNo}}</td>
+                                <td>{{item.dailyRate}}</td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </div>
+            </div>
+        </div>
+ </div>
+        <div class="col-5">
+            <div class="card">
+                <div class="card-header bg-warning">
+                    <h5>create new car</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6 mt-2">
+                            <label >reg no</label>
+                            <input type="text" class="form-control" placeholder="enter car image url"/>
+                        </div>
+                        <div class="col-6 mt-2">
+                            <label >brand</label>
+                            <input type="text" class="form-control" placeholder="enter car brand"/>
+                        </div>
+                        <div class="col-6 mt-2">
+                            <label >model</label>
+                            <input type="text" class="form-control" placeholder="enter car model"/>
+                        </div>
+                        <div class="col-6 mt-2">
+                            <label >year</label>
+                            <input type="text" class="form-control" placeholder="enter year"/>
+                        </div>
+                        <div class="col-6 mt-2">
+                            <label >color</label>
+                            <input type="text" class="form-control" placeholder="enter color"/>
+                        </div>
+                        <div class="col-6 mt-2">
+                            <label >daily rate</label>
+                            <input type="text" class="form-control" placeholder="enter daily rate"/>
+                        </div>
+                         <div class="col-6 mt-2">
+                            <label >car image url</label>
+                            <input type="text" class="form-control" placeholder="enter  car image url"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mt-2 text-center">
+                            <button class="btn btn-secondary mt-2">reset form</button>
+                            <button class="btn btn-primary mt-2">save car</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+</div>
