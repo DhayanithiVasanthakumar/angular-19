@@ -14,6 +14,7 @@ import { ReactiveForm } from '../components/reactive-form/reactive-form';
 import { GetApi } from '../components/API/get-api/get-api';
 import { PostApi } from '../components/API/post-api/post-api';
 import { ResourceApi } from '../components/resource-api/resource-api';
+import { Customer } from '../components/API/customer/customer';
 
 export const routes: Routes = [
     //default route
@@ -22,7 +23,7 @@ export const routes: Routes = [
         redirectTo:"databinding",
         pathMatch: 'full'
     },
-    //namba create pana component  ku routing set panarom4
+    //namba create pana component ku routing set panarom4
     {
         path:'user',
         component:User
@@ -82,5 +83,9 @@ export const routes: Routes = [
     {
         path:'resource-api',
         component:ResourceApi
+    },
+    {
+        path:"customer-component",
+        component:Customer
     }
 ];
