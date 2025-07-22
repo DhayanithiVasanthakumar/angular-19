@@ -16,19 +16,31 @@ import { PostApi } from '../components/API/post-api/post-api';
 import { ResourceApi } from '../components/resource-api/resource-api';
 import { Customer } from '../components/API/customer/customer';
 import { LifeCycle } from '../components/life-cycle/life-cycle';
+import { Login } from '../components/login/login';
+import { Layout } from '../components/layout/layout';
 
 export const routes: Routes = [
     //default route
     {
         path: '',
-        redirectTo:"databinding",
+        redirectTo:"login",
         pathMatch: 'full'
     },
-    //namba create pana component ku routing set panarom4
+    //namba create pana component ku routing set panarom
     {
+        path:'login',
+        component:Login
+
+    },
+    {
+        path:'',
+        component:Layout,
+        children:[
+            {
         path:'user',
         component:User
     },
+   
     {
         path:'admin',
         component: Admin
@@ -93,4 +105,7 @@ export const routes: Routes = [
         path:"life-cycle",
         component:LifeCycle
     }
+        ]
+    },
+    
 ];
