@@ -1,10 +1,11 @@
 import { CommonModule, UpperCasePipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { NaPipe } from '../../pipes/na-pipe';
+import { ProgressBar } from "../../reusable/progress-bar/progress-bar";
 
 @Component({
   selector: 'app-ng-for',
-  imports: [CommonModule,NaPipe],
+  imports: [CommonModule, NaPipe, ProgressBar],
   templateUrl: './ng-for.html',
   styleUrl: './ng-for.css'
 })
