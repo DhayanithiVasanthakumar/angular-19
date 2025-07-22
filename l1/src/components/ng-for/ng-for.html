@@ -43,7 +43,7 @@
         <tbody>
             <tr *ngFor="let emp of employeeList;let sno=index">
                 <td>{{sno+1}}</td>
-                <td>{{emp.name}}</td>
+                <td>{{emp.name | uppercase | na}}</td>
                 <td>{{emp.position}}</td>
             </tr>
         </tbody>
@@ -51,3 +51,36 @@
 
     </div>
 </div>
+
+<!-- pipes -->
+ <div class="row">
+    <div class="col-3">
+        Course Name=>{{courseName}}
+        <br>
+        upper case=>{{courseName | uppercase}}
+        <br>
+        lowercase=>{{courseName | lowercase}}
+        <br>
+
+    </div>
+    <div class="col-3">
+        studentObj => {{studentObj}}
+        <br>
+        studentObj => {{studentObj | json}}
+        <br>
+        
+    </div>
+
+    <div class="col-3">
+        current date=>{{currentDate}}
+        <br>
+        date only=>{{currentDate | date}}
+        <br>
+        date only in format=>{{currentDate | date :'dd-MMM-yy'}}
+        <br>
+        date only in format=>{{currentDate | date :'dd-mm-yyyy'}}
+        <br>
+        time=>{{currentDate | date :'hh-mm-ss'}}
+    </div>
+
+ </div>
