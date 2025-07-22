@@ -18,6 +18,7 @@ import { Customer } from '../components/API/customer/customer';
 import { LifeCycle } from '../components/life-cycle/life-cycle';
 import { Login } from '../components/login/login';
 import { Layout } from '../components/layout/layout';
+import { NgTempNgContainer } from '../components/ng-temp-ng-container/ng-temp-ng-container';
 
 export const routes: Routes = [
     //default route
@@ -104,6 +105,10 @@ export const routes: Routes = [
     {
         path:"life-cycle",
         component:LifeCycle
+    },
+    {
+        path:"ngTempContainer",
+        component:NgTempNgContainer
     }
         ]
     },
